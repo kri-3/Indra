@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indra - Wear the Storm</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="background-glow"></div>
+  <header>
+    <div class="logo">INDRA ⚡</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#shop">Shop</a>
+      <a href="#drops">Drops</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="themeToggle">🌓</button>
+  </header>
+
+  <section class="hero fade-in">
+    <h1>Wear the Storm</h1>
+    <p>Luxury meets heritage. Designed with thunder in mind.</p>
+  </section>
+
+  <section id="about" class="fade-in">
+    <h2>About Indra</h2>
+    <p>Indra is a fusion of modern fashion and ancient power. Inspired by the Indian god of thunder, our pieces combine earthy tones, bold silhouettes, and electric spirit.</p>
+  </section>
+
+  <section id="shop" class="products fade-in">
+    <h2>Featured Collection</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="brown-shirt-front.png" alt="Brown Indra Tee Front"/>
+        <h3>Indra Earth Tee - Front</h3>
+        <p>$45.00</p>
+      </div>
+      <div class="product-card">
+        <img src="brown-shirt-back.png" alt="Brown Indra Tee Back"/>
+        <h3>Indra Earth Tee - Back</h3>
+        <p>$45.00</p>
+      </div>
+      <div class="product-card">
+        <img src="indra-app-screen.png" alt="Indra App UI"/>
+        <h3>App Preview</h3>
+        <p>Design Showcase</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="drops" class="fade-in">
+    <h2>Upcoming Drops</h2>
+    <p>Stay tuned for the "Divine Voltage" collection. Launching soon.</p>
+  </section>
+
+  <footer id="contact">
+    <p>Contact us: indrastudios@gmail.com</p>
+    <p>&copy; 2025 Indra. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const body = document.body;
+    if (localStorage.getItem('theme') === 'light') {
+      body.classList.add('light-mode');
+    }
+    toggle.onclick = () => {
+      body.classList.toggle('light-mode');
+      localStorage.setItem('theme', body.classList.contains('light-mode') ? 'light' : 'dark');
+    };
+  </script>
+</body>
+</html>
